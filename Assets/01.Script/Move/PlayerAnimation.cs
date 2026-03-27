@@ -17,13 +17,13 @@ public class PlayerAnimation : MonoBehaviour
     {
         if (anim == null || rb == null || playerJump == null) return;
 
-        float hSpeed = new Vector2(rb.linearVelocity.x, rb.linearVelocity.z).magnitude;
-        anim.SetFloat("Speed", hSpeed);
+        float speed = new Vector2(rb.linearVelocity.x, rb.linearVelocity.z).magnitude;
+        anim.SetFloat("Speed", speed);
 
         anim.SetBool("IsGrounded", playerJump.groundCheck);
 
-        float yVel = rb.linearVelocity.y;
-        anim.SetFloat("yVelocity", yVel);
+        float yVelocity = rb.linearVelocity.y;
+        anim.SetFloat("yVelocity", yVelocity);
 
     }
 }
